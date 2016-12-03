@@ -1,0 +1,46 @@
+
+#main{
+    
+}
+.row-room{
+    padding-top:20px;
+    padding-bottom:20px;
+   background-color:lightcyan; 
+}
+.row-message {
+    height:400px;
+  
+}
+.col-messages{
+    background-color:antiquewhite;
+    height:100%;
+    border-right:1px solid grey;
+    overflow: scroll;
+}
+#messages{
+    list-style:none;
+    padding:20px;
+    letter-spacing:0.8px;
+  
+}
+.col-rooms {
+    height:100%;
+    background-color:aliceblue;
+}
+#rooms-list{
+    list-style:none;
+}
+#footer{
+    background-color:lightgrey;
+}
+
+.notification_message{
+    font-style:italic;
+    color:grey;
+}
+.chat_message {
+    font-style:normal;
+    color:black;
+    font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+
+}

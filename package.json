@@ -1,0 +1,15 @@
+{
+  "name": "socketio-chatroom",
+  "version": "1.0.0",
+  "description": "socketio-nodejs-expressjs-angularjs-chatroom",
+  "main": "chat-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "anjali",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.10.2",
+    "socket.io": "^1.5.1"
+  }
+}

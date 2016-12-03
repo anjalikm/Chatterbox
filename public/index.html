@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="lib/angular.min.js"></script>
+       
+    </head>
+    <body ng-app="chatApp" ng-controller="chatController">
+        <section id="main">
+            <div class="container">
+                <div class="row  row-room">
+                    <div class="col-sm-12">
+                        <h5>{{room}}</h5>
+                    </div>
+                </div>
+                <div class="row row-message">
+                    <div class="col-sm-10 col-messages">
+                        <ul id="messages">
+                            <li ng-class="msg.class" ng-repeat="msg in messages">{{msg.str}}</li>
+                        </ul>
+                        
+                    </div>
+                    <div class="col-sm-2 col-rooms">
+                        <ul id="rooms-list">
+                            <li ng-repeat="room in rooms">{{room}}</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row row-form">
+                    <form class="form-horizontal">
+                      <div class="form-group">
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="message" placeholder="type your message here...." ng-model="message">
+                        </div>
+                          <div class="col-sm-2">
+                          <button type="submit" class="btn btn-info" ng-click="sendMessage()">Send</button>
+                        </div>
+                      </div>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+        <section id="footer">
+            <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h6>Chat Commands</h6>
+                    <ul>
+                        <li>Change Nickname: /nick [nickname]</li>
+                        <li>Join/Create room: /join [roomname]</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </section>
+       
+        <script src="/socket.io/socket.io.js"></script>
+        <!-- jQuery library -->
+        <script src="lib/jquery/jquery-3.1.1.min.js"></script>
+
+        <!-- compiled JavaScript -->
+        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers.js"></script>
+        <!--<script src="scripts/client-socketio.js"></script>-->
+    </body>
+</html>
